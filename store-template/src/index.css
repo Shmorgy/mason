@@ -1,0 +1,297 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Define primary and secondary colors as variables */
+    --color-primary: #ffffff; /* default dark gray */
+    --color-secondary: #0a0f12;
+    --color-back: #000000;
+    --color-front: #808080;
+
+}
+
+
+
+.gap {
+    margin-top: calc(4vh + 1.5vw);
+    align-self: center;
+}
+
+body {
+    @apply bg-gray-50 text-gray-800 min-h-screen;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--color-back);
+    mix-blend-mode: normal;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.profile{
+
+}
+
+/* small helper */
+.truncate-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical;
+}
+
+.full-height {
+    height: 100%;
+    /* 100% of the viewport height */
+}
+
+.text {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    @apply flex items-center justify-center; /* center content */
+    color: var(--color-primary); /* default, will be overridden dynamically if needed */
+    mix-blend-mode: exclusion; /* inverts color relative to background */
+    font-weight: normal
+}
+
+.type {
+    margin-bottom: calc(1rem + 3vw);
+    font-size: calc(1.9vw + 0.9vh);
+    border-radius: 30px;
+    background-color: var(--color-primary);
+    padding: 1rem 5rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    mix-blend-mode: exclusion;
+    white-space: normal;
+    word-wrap: break-word;
+    width: max-content; /* button expands ONLY as needed */
+    width: 90%;
+    max-width: 91vw; /* responsive */
+    height: 10vh; /* no forced height — stays centered */
+}
+
+.type::placeholder {
+    
+    font-size: calc(16px + 1vw);
+    letter-spacing: 9px;
+    color: var(--color-secondary);
+    font-weight: bold;
+    z-index: -10;
+}
+
+.text:hover {
+    font-size: 17px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    @apply flex items-center justify-center; /* center content */
+    color: var(--color-primary); /* default, will be overridden dynamically if needed */
+    mix-blend-mode: exclusion; /* inverts color relative to background */
+    font-weight: lighter;
+    backdrop-filter:blur(1px);
+    border-radius: 35px;
+    height: max-content;
+    
+}
+
+.info {
+    margin: 5vw;
+    text-align: center;
+    align-items: center; /* vertical center */
+    padding: calc(32px + 1vw);
+    position: center;
+    line-height: calc(3vh + 3vw);
+    font-size: calc(32px + 1vw);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--color-primary); /* default, will be overridden dynamically if needed */
+    mix-blend-mode: exclusion; /* inverts color relative to background */
+    font-weight: bold
+}
+
+.supsin {
+    margin: 25px;
+    text-align: center;
+    align-items: center; /* vertical center */
+    padding: 10px;
+    line-height: calc(3vh + 3vw);
+    font-size: calc(32px + 1vw);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--color-primary); /* default, will be overridden dynamically if needed */
+    mix-blend-mode: exclusion; /* inverts color relative to background */
+    font-weight: bold
+}
+
+.sect {
+    margin: 0;
+    padding-top: calc(32px + 1vw);
+    padding-bottom: calc(32px + 1vw);
+    border-radius: 35px;
+    background-image: radial-gradient(#8a5cf6 1px, transparent 1px);
+    background-size: 10px 10px;
+    gap: 1em; /* Smaller gap between items */
+    /* Even smaller space from the container edges */
+}
+
+.sign_sect {
+    text-align: center;
+    align-items: center;
+    border-radius: 35px;
+    background-image: radial-gradient(#8a5cf6 1px, transparent 1px);
+    background-size: 10px 10px;
+    /* Example: 3 equal-width columns */
+    gap: 1em; /* Smaller gap between items */
+    box-sizing: border-box;
+    margin: 0;
+    padding: calc(32px + 1vw);
+}
+
+.title {
+    text-align: left;
+    font-size: calc(32px + 1vw);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    letter-spacing: calc(2px + 1vw);
+    color: var(--color-primary);
+    mix-blend-mode: exclusion;
+    font-weight: bold;
+    margin-left: 10vw;
+    word-spacing: 100vw;
+}
+
+.welcome {
+    line-height: calc(5vh + 2vw);
+    text-align-last: center;
+    white-space: break-spaces;
+    font-size: calc(32px + 3vw);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    letter-spacing: calc(2px + 1vw);
+    color: var(--color-primary);
+    mix-blend-mode: exclusion;
+    font-weight: bold;
+    @apply flex items-center justify-center;
+    height: max-content;
+    white-space: pre-wrap;
+    word-spacing: 100vw;
+}
+
+
+.store {
+    line-height: calc(18vh - 3vw);
+    font-size: calc(3rem + 8vw);
+    display: inline;
+    @apply flex items-center justify-center;
+    color: var(--color-primary);
+    mix-blend-mode: exclusion;
+    font-weight: bold;
+}
+
+.butt {
+    justify-self: center;
+    /* ensures perfect centering */
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center; /* horizontal center */
+    /* centers the button itself */
+    padding: 1rem 5rem; /* improves sizing instead of fixed height */
+    margin-top: 10vh;
+    border-radius: 25px;
+    background-color: var(--color-primary);
+    color: var();
+    width: max-content; /* button expands ONLY as needed */
+    width: 90%;
+    max-width: 91vw; /* responsive */
+    height: max-content; /* no forced height — stays centered */
+
+    font-weight: bold;
+    font-size: calc(12px + 2vw);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    mix-blend-mode: exclusion;
+}
+
+
+.store-butt {
+    border-radius: 35px;
+    background-repeat: repeat;
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: calc(12px + 2vw);
+    padding: 0.5em 1em; /* natural, flexible button size */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-butt {
+    border-radius: 35px;
+    background-repeat: repeat;
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: calc(12px + 2vw);
+    padding: 0.5em 1.7em; /* natural, flexible button size */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+
+.profile-butt::hovered{
+
+}
+
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(8vh + 1vw);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    border-bottom: 2px solid rgba(5, 5, 5, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    margin: 0px;
+    width: 100%
+
+}
+
+
+
+
+/* Your existing button style */
+.i-butt {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+
+
+@keyframes drift {
+    0% {
+        background-position: 0px 0px;
+    }
+
+   
+
+    100% {
+        background-position: 100px 200px; /* subtle diagonal drift */
+    }
+}
+
+.test {
+    
+}
+
+.testsection {
+    
+}
